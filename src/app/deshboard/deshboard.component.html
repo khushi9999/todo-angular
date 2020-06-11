@@ -1,0 +1,69 @@
+<block-ui>
+
+  <div class="bd-example">
+    <div class="jumbotron">
+      <p class="lead"></p>
+      <hr class="my-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-8">
+            <h1 class="display-4">Welcome to {{ title }}!</h1>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-8">
+            <label > Enter Id</label>
+
+            <input [(ngModel)]="selectedID" class="form-control inputarea" (keyup.enter)="showDetails()"
+              (keypress)="numberOnly($event)">
+            <button type="button" class="btn btn-primary mt24 showbtn" (click)="showDetails()">Show</button>
+          </div>
+          <div class="col">
+          </div>
+
+
+        </div>
+      
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-8" *ngIf="showdata" style="margin-top:20px">
+            <div class="row">
+              <div class="col-2">
+                <label>Title : </label>
+              </div>
+              <div class="col">
+                <p>{{details.title }}</p>
+              </div>
+            </div>
+           
+            <div class="row">
+              <div class="col-2">
+                <label>Status : </label>
+              </div>
+              <div class="col">
+                <p>{{status }}</p>
+              </div>
+            </div>
+          
+           
+
+          </div>
+          <div class="col">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</block-ui>
